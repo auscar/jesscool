@@ -1,0 +1,47 @@
+body,div,ul,ol,dl,h1,h2,h3,h4,h5,h6,li,dd,blockquote,pre,code,form,fieldset,p{ margin:0; padding:0;}
+body { font:12px/1.5 Tahoma,Helvetica,Arial,sans-serif;}
+
+address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal;}
+
+a { text-decoration:none;}
+img { border:0;}
+body, h5, ul{ font-size: 12px; }
+li{ list-style:none;}
+pre { font: 12px 'Courier New', monospace; }
+
+
+
+/* just for test */
+.for_debug .main{ background:#EEE;}
+.for_debug .sub{ background:#EEE;}
+.for_debug .extra{ background:#EEE;}
+
+
+.main,.sub,.extra,.inl_blk{   display:inline-block !important; display:-moz-inline-stack; *display:inline; zoom:1; font-size:12px; vertical-align:top; position:relative; font:12px/1.5 simsun,"仿宋","宋体","黑体",Tahoma,Helvetica,Arial,sans-serif;}
+
+.content-c2-s7a, .content-c3-s5e7a,.content-c3-s5e7b,.content-c2-s7a,.content-c2-s7b { font-size:0; vertical-align:top;}
+
+/* =S 2 grids divisions */
+.content-c2-s7a .main{ width:670px;}
+.content-c2-s7a .sub{ width:270px; left:10px;}
+
+.content-c2-s7b .main{ width:670px; left:280px;}
+.content-c2-s7b .sub{ width:270px; left:-670px;}
+/* =E 2 grids divisions */
+
+
+/* =S 3 grids division  */
+
+.content-c3-s5e7a .main{  width:470px; left:200px; }
+.content-c3-s5e7a  .sub {  width:190px; left:-470px; }
+.content-c3-s5e7a  .extra {  width:270px; left:20px;}
+
+.content-c3-s5e7b  .main{  width:470px; left:480px;}
+.content-c3-s5e7b  .sub {  width:190px; left:-470px;}
+.content-c3-s5e7b  .extra {  width:270px; left:-460px;}
+/* =E 3 grids division  */
+
+#page{ margin:0 auto; width:950px;}
+.page{ margin:0 auto; width:950px;}
+
+

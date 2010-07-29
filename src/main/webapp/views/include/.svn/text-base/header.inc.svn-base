@@ -1,0 +1,27 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"  pageEncoding="UTF-8"%>  
+
+
+<div id="ad"></div>
+<div id="logo">
+	<a href="http://www.jesscool.com" style="display:block;width:100%;height:100%;text-indent:-9999px;">
+    	jesscool!男士形象专家
+	</a>
+</div>
+
+<div id="nav1" class="clearFloat">
+	<ul>
+		<li><a href="#">韩日造型</a> <a href="#">欧美风格</a></li>
+		<li><a href="#">斯文型</a> <a href="#">运动型</a> <a href="#">休闲型</a></li>
+		<li><a href="#">商务型</a> <a href="#">约会型</a> <a href="#">聚会型</a></li>
+		<li><a href="#">量体裁衣</a></li>
+		<li><a href="#">配饰</a></li>
+	</ul>
+</div>
+
+<div id="nav2" class="clearFloat">
+	<ul>
+		<li><a href="http://www.jesscool.com">首页</a></li>
+		<li><a href="http://www.jesscool.com/advise">我要建议</a></li>
+		<li><a href="http://www.jesscool.com/map">网站地图</a></li>
+	</ul>
+</div>

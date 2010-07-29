@@ -1,0 +1,150 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  	<display-name>Jesscool! Man's dressing expert!</display-name>
+		
+	
+	<filter>
+        <filter-name>jesscool filter</filter-name>
+        <filter-class>
+            com.riseful.jesscool.secure.AuthorizeFilter
+        </filter-class>
+        <init-param>
+            <param-name>allowRole</param-name>
+            <param-value>1</param-value>
+        </init-param>
+    </filter>
+    
+    <filter>
+		<filter-name>SetCharacterEncoding</filter-name>
+		<filter-class>
+		   	com.riseful.filters.SetCharacterEncodingFilter 
+		</filter-class>
+		<init-param>
+		    <param-name>encoding</param-name>
+		    <param-value>UTF-8</param-value>
+		</init-param>
+    	</filter>
+
+	<filter-mapping>
+		<filter-name>SetCharacterEncoding</filter-name>
+		<url-pattern>/*</url-pattern>
+    </filter-mapping>
+	
+	<filter-mapping>
+        <filter-name>jesscool filter</filter-name>
+        <url-pattern>/secure/*</url-pattern>
+    </filter-mapping>
+    
+	
+	
+	<servlet>
+		<servlet-name>UploadServlet</servlet-name>
+		<servlet-class>com.riseful.jesscool.UploadServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>HomeServlet</servlet-name>
+		<servlet-class>com.riseful.jesscool.HomeServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>DoAddArticleServlet</servlet-name>
+		<servlet-class>com.riseful.jesscool.DoAddArticleServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ModifyArticleServlet</servlet-name>
+		<servlet-class>com.riseful.jesscool.ModifyArticleServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>DirectForwardServlet</servlet-name>
+		<servlet-class>com.riseful.jesscool.DirectForwardServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>DoModifyArticleServlet</servlet-name>
+		<servlet-class>com.riseful.jesscool.DoModifyArticleServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>AddArticleServlet</servlet-name>
+		<servlet-class>com.riseful.jesscool.AddArticleServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ViewArticleServlet</servlet-name>
+		<servlet-class>com.riseful.jesscool.ViewArticleServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ViewMoreArticlesServlet</servlet-name>
+		<servlet-class>com.riseful.jesscool.ViewMoreArticlesServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>com.riseful.jesscool.LoginServlet</servlet-class>
+	</servlet>
+	
+	
+	<!-- url pattern -->
+	<servlet-mapping>
+    	<servlet-name>UploadServlet</servlet-name>
+        <url-pattern>/upload.do</url-pattern>
+    </servlet-mapping>
+	<servlet-mapping>
+    	<servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login.do</url-pattern>
+    </servlet-mapping>
+	<servlet-mapping>
+    	<servlet-name>ViewMoreArticlesServlet</servlet-name>
+        <url-pattern>/moreLook.do</url-pattern>
+    </servlet-mapping>
+	<servlet-mapping>
+    	<servlet-name>ViewArticleServlet</servlet-name>
+        <url-pattern>/viewLook.do</url-pattern>
+    </servlet-mapping>
+	<servlet-mapping>
+    	<servlet-name>HomeServlet</servlet-name>
+        <url-pattern>/home.do</url-pattern>
+    </servlet-mapping>
+    
+
+    
+    
+    <servlet-mapping>
+    	<servlet-name>AddArticleServlet</servlet-name>
+        <url-pattern>/secure/addArticle</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+    	<servlet-name>DoAddArticleServlet</servlet-name>
+        <url-pattern>/secure/doAddArticle</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+    	<servlet-name>DoModifyArticleServlet</servlet-name>
+        <url-pattern>/secure/doModifyArticle</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet-mapping>
+    	<servlet-name>ModifyArticleServlet</servlet-name>
+        <url-pattern>/secure/modifyArticle</url-pattern>
+    </servlet-mapping>
+    
+   	<servlet-mapping>
+    	<servlet-name>DirectForwardServlet</servlet-name>
+        <url-pattern>/secure/adminActions</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+    	<servlet-name>DirectForwardServlet</servlet-name>
+        <url-pattern>/secure/go</url-pattern>
+    </servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>/views/default.jsp</welcome-file>
+	</welcome-file-list>
+
+    
+    
+</web-app>

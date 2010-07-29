@@ -1,0 +1,5 @@
+staticServer=http://s.jesscool.com
+webServer=http://www.jesscool.com
+imageServer=http://s.jesscool.com
+uploadPath=/upload
+uploadFileSystemPath=/var/images

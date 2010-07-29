@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="**/*.java" kind="src" path="src/main/resources"/>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="var" path="M2_REPO/junit/junit/3.8.1/junit-3.8.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/home/auscar/repo/javax/servlet/servlet-api/2.3/servlet-api-2.3.jar"/>
+	<classpathentry kind="lib" path="/home/auscar/repo/com/riseful/jesscooljava/0.1/jesscooljava-0.1.jar"/>
+	<classpathentry kind="lib" path="/home/auscar/repo/org/springframework/spring/1.2.6/spring-1.2.6.jar"/>
+	<classpathentry kind="lib" path="/home/auscar/repo/commons-fileupload/commons-fileupload/1.2.1/commons-fileupload-1.2.1.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>

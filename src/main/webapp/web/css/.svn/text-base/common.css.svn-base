@@ -1,0 +1,24 @@
+/*-- common style start --*/
+
+.con_spacer{ margin-bottom:7px;}
+.con_spacer15{margin-bottom:15px;}
+.con_spacer40{margin-bottom:40px;}
+.pd_left10{ padding-left:10px;}
+
+
+.position_topRight{ position:absolute;top:6px;right:3px;}
+.position_topRight2{ position:absolute;top:3px;right:3px;}
+
+.bold{ font-weight:bold;}
+
+.font_en a{ font-family:Verdana, Arial, Helvetica, sans-serif;color:#935c5d;}
+.font_en a:hover{ color:#935c5d;}
+
+.clear{ clear:both;}
+.clearFloat {zoom:1} 
+.clearFloat:after {content: '\20';display: block;clear: both;}
+
+.more{ text-align:right;}
+
+/*-- common style end --*/
+

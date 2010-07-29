@@ -1,0 +1,9 @@
+.test{ border:solid red 1px; }
+.test2{ background:#CCC; }
+.box{ margin-bottom:10px; }
+.section { width:100%; }
+
+
+
+.header{ background:#eee; }
+.footer { text-align:center; }

@@ -1,0 +1,20 @@
+jsp:
+修改文章的时候调用一个js，询求id
+
+java:
+ViewMoreLookServlet(大概是这个名字), 调用后台服务的digest有关方法获得文章的摘要
+
+--此行及以下内容将会被忽略--
+
+M    target/jesscool/WEB-INF/lib/jesscooljava-0.1.jar
+M    target/jesscool/WEB-INF/classes/com/riseful/jesscool/ViewMoreArticlesServlet.class
+M    target/jesscool/views/moreLook.jsp
+M    target/jesscool/views/include/header.inc
+M    target/jesscool/views/include/sidebar.inc
+M    target/jesscool/views/admin/adminActions.jsp
+M    target/maven-archiver/pom.properties
+M    target/war/work/webapp-cache.xml
+M    target/jesscool.war
+M    src/main/java/com/riseful/jesscool/ViewMoreArticlesServlet.java
+M    src/main/webapp/views/include/header.inc
+M    src/main/webapp/views/include/sidebar.inc

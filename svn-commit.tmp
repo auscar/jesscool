@@ -1,0 +1,12 @@
+ViewMoreArticlesServilet的后台接口改变了, 换了一个getSimpleArticleDigestsByTagIds
+--此行及以下内容将会被忽略--
+
+M    target/jesscool/WEB-INF/lib/jesscooljava-0.1.jar
+M    target/jesscool/WEB-INF/classes/com/riseful/jesscool/ViewMoreArticlesServlet.class
+M    target/jesscool/views/moreLook.jsp
+M    target/jesscool/views/include/header.inc
+M    target/jesscool/views/admin/adminActions.jsp
+M    target/maven-archiver/pom.properties
+M    target/war/work/webapp-cache.xml
+M    target/jesscool.war
+M    src/main/java/com/riseful/jesscool/ViewMoreArticlesServlet.java
