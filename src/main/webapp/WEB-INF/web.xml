@@ -48,7 +48,6 @@
 		<servlet-name>HomeServlet</servlet-name>
 		<servlet-class>com.riseful.jesscool.HomeServlet</servlet-class>
 	</servlet>
-
 	<servlet>
 		<servlet-name>DoAddArticleServlet</servlet-name>
 		<servlet-class>com.riseful.jesscool.DoAddArticleServlet</servlet-class>
@@ -83,6 +82,10 @@
 	<servlet>
 		<servlet-name>LoginServlet</servlet-name>
 		<servlet-class>com.riseful.jesscool.LoginServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>UserLoginServlet</servlet-name>
+		<servlet-class>com.riseful.jesscool.UserLoginServlet</servlet-class>
 	</servlet>
 	<servlet>
 		<servlet-name>AddTagServlet</servlet-name>
@@ -123,6 +126,54 @@
 	<servlet>
 		<servlet-name>RemoveArticleTagServlet</servlet-name>
 		<servlet-class>com.riseful.jesscool.RemoveArticleTagServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>UserRegisterServlet</servlet-name>
+		<servlet-class>com.riseful.jesscool.UserRegisterServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>MemberForget</servlet-name>
+		<servlet-class>com.riseful.jesscool.MemberForget</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ImgShowServlet</servlet-name>
+		<servlet-class>com.riseful.jesscool.ImgShowServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ChangeImgServlet</servlet-name>
+		<servlet-class>com.riseful.jesscool.ChangeImgServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetAllImgTagServlet</servlet-name>
+		<servlet-class>com.riseful.ajax.GetAllImgTagServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ImgCollectServlet</servlet-name>
+		<servlet-class>com.riseful.jesscool.ImgCollectServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>UserLogoutServlet</servlet-name>
+		<servlet-class>com.riseful.jesscool.UserLogoutServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ImgManagementServlet</servlet-name>
+		<servlet-class>com.riseful.jesscool.ImgManagementServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>UpdateImgTagServlet</servlet-name>
+		<servlet-class>com.riseful.ajax.UpdateImgTagServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DeleteTagServlet</servlet-name>
+		<servlet-class>com.riseful.ajax.DeleteTagServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>UpdateImgServlet</servlet-name>
+		<servlet-class>com.riseful.ajax.UpdateImgServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DeleteImgServlet</servlet-name>
+		<servlet-class>com.riseful.ajax.DeleteImgServlet</servlet-class>
 	</servlet>
 	
 	
@@ -175,6 +226,10 @@
     	<servlet-name>LoginServlet</servlet-name>
         <url-pattern>/login.do</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+    	<servlet-name>UserLoginServlet</servlet-name>
+        <url-pattern>/userLogin.do</url-pattern>
+    </servlet-mapping>
 	<servlet-mapping>
     	<servlet-name>ViewMoreArticlesServlet</servlet-name>
         <url-pattern>/moreLook.do</url-pattern>
@@ -188,7 +243,55 @@
         <url-pattern>/home.do</url-pattern>
     </servlet-mapping>
     
+	<servlet-mapping>
+    	<servlet-name>UserRegisterServlet</servlet-name>
+    	<url-pattern>/userRegister.do</url-pattern>
+    </servlet-mapping>
 
+    <servlet-mapping>
+		<servlet-name>MemberForget</servlet-name>
+		<url-pattern>/memberForget.do</url-pattern>    
+    </servlet-mapping>
+    <servlet-mapping>
+		<servlet-name>ImgShowServlet</servlet-name>
+		<url-pattern>/imgShow.do</url-pattern>    
+    </servlet-mapping>
+    <servlet-mapping>
+		<servlet-name>ChangeImgServlet</servlet-name>
+		<url-pattern>/changeImg.do</url-pattern>    
+    </servlet-mapping>
+    <servlet-mapping>
+		<servlet-name>GetAllImgTagServlet</servlet-name>
+		<url-pattern>/getAllImgTag.do</url-pattern>    
+    </servlet-mapping>
+    <servlet-mapping>
+		<servlet-name>ImgCollectServlet</servlet-name>
+		<url-pattern>/imgCollect.do</url-pattern>    
+    </servlet-mapping>
+    <servlet-mapping>
+		<servlet-name>UserLogoutServlet</servlet-name>
+		<url-pattern>/userLogout.do</url-pattern>    
+    </servlet-mapping>
+    <servlet-mapping>
+		<servlet-name>ImgManagementServlet</servlet-name>
+		<url-pattern>/imgManagement.do</url-pattern>    
+    </servlet-mapping>
+    <servlet-mapping>
+		<servlet-name>UpdateImgTagServlet</servlet-name>
+		<url-pattern>/updateImgTag.do</url-pattern>    
+    </servlet-mapping>
+    <servlet-mapping>
+		<servlet-name>DeleteTagServlet</servlet-name>
+		<url-pattern>/deleteTag.do</url-pattern>    
+    </servlet-mapping>
+    <servlet-mapping>
+		<servlet-name>UpdateImgServlet</servlet-name>
+		<url-pattern>/updateImg.do</url-pattern>    
+    </servlet-mapping>
+    <servlet-mapping>
+		<servlet-name>DeleteImgServlet</servlet-name>
+		<url-pattern>/deleteImg.do</url-pattern>    
+    </servlet-mapping>
     
     
     <servlet-mapping>
@@ -225,6 +328,5 @@
 		<welcome-file>/views/default.jsp</welcome-file>
 	</welcome-file-list>
 
-    
     
 </web-app>

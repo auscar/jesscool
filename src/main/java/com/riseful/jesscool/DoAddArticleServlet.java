@@ -24,13 +24,19 @@ public class DoAddArticleServlet extends HttpServlet {
 		String title = req.getParameter("articleTitle");
 		String content = req.getParameter("articleBody");
 		String articleTagId = req.getParameter("articleTagId");
-		String articleCover = req.getParameter("articleCover");
+		String articleCover = req.getParameter("postUrl");
+		String intime = req.getParameter("articleIntime");
 		Article article = new Article();
 		article.setTitle(title);
 		article.setContent(content);
-		Date now = new Date();
-		SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd");
-		article.setIntime(f.format(now)) ;
+		if( intime == null || intime.equals("") ){
+			Date now = new Date();
+			SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd");
+			article.setIntime(f.format(now)) ;
+		}else{
+			article.setIntime(intime);
+		}
+		
 		
 		System.out.println("wwwwwwwwwwwww tag : "+articleTagId);
 		if(articleTagId != null){
@@ -48,9 +54,9 @@ public class DoAddArticleServlet extends HttpServlet {
 		
 		try {
 			if(ret>0){
-				res.getWriter().println("{code:0,msg:'sus'}");
+				res.getWriter().println("{\"code\":\"0\",\"msg\":\"sus\"}");
 			}else{
-				res.getWriter().println("{code:2,msg:'fail'}");
+				res.getWriter().println("{\"code\":\"2\",\"msg\":\"faild\"}");
 			}
 		} catch (IOException e) {
 			e.printStackTrace();

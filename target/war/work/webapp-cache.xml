@@ -72,14 +72,22 @@
           <string>csspro/index.css</string>
           <string>csspro/reset-grids.css</string>
           <string>views/include/header.inc</string>
+          <string>views/include/count.inc</string>
           <string>views/include/sidebar.inc</string>
           <string>views/include/footer.inc</string>
           <string>views/include/head.inc</string>
+          <string>views/memberForget.jsp</string>
+          <string>views/imgShow.jsp</string>
           <string>views/default.jsp</string>
+          <string>views/userLogin.jsp</string>
           <string>views/index.jsp</string>
+          <string>views/imgManagement.jsp</string>
           <string>views/viewLook.jsp</string>
+          <string>views/success.jsp</string>
           <string>views/login.jsp</string>
+          <string>views/userRegister.jsp</string>
           <string>views/moreLook.jsp</string>
+          <string>views/Copy of userRegister.jsp</string>
           <string>views/admin/include/manage_header.inc</string>
           <string>views/admin/modifyTag.jsp</string>
           <string>views/admin/addArticle.jsp</string>
@@ -87,11 +95,13 @@
           <string>views/admin/adminActions.jsp</string>
           <string>views/admin/articlesUnderTag.jsp</string>
           <string>views/admin/modifyArticle.jsp</string>
+          <string>views/transfer.jsp</string>
           <string>views/uploadTest.jsp</string>
-          <string>views/test.jsp</string>
           <string>WEB-INF/acegi-config</string>
           <string>WEB-INF/web.xml</string>
           <string>WEB-INF/secure.xml</string>
+          <string>WEB-INF/lib/mail.jar</string>
+          <string>WEB-INF/lib/activation.jar</string>
           <string>WEB-INF/classes/acegi-config</string>
           <string>WEB-INF/classes/f.properties</string>
           <string>WEB-INF/classes/com/riseful/filters/SetCharacterEncodingFilter.class</string>
@@ -99,26 +109,55 @@
           <string>WEB-INF/classes/com/riseful/jesscool/DelArticleServlet.class</string>
           <string>WEB-INF/classes/com/riseful/jesscool/ModifyArticleServlet.class</string>
           <string>WEB-INF/classes/com/riseful/jesscool/DoModifyTagServlet.class</string>
+          <string>WEB-INF/classes/com/riseful/jesscool/RegisterServlet.class</string>
           <string>WEB-INF/classes/com/riseful/jesscool/AllTagsServlet.class</string>
           <string>WEB-INF/classes/com/riseful/jesscool/ModifyTagServlet.class</string>
           <string>WEB-INF/classes/com/riseful/jesscool/LoginServlet.class</string>
+          <string>WEB-INF/classes/com/riseful/jesscool/justForTesting.class</string>
+          <string>WEB-INF/classes/com/riseful/jesscool/UserRegisterServlet.class</string>
+          <string>WEB-INF/classes/com/riseful/jesscool/UserLoginServlet.class</string>
+          <string>WEB-INF/classes/com/riseful/jesscool/ImgCollectServlet.class</string>
           <string>WEB-INF/classes/com/riseful/jesscool/DelTagServlet.class</string>
+          <string>WEB-INF/classes/com/riseful/jesscool/ImgShowServlet1111.class</string>
           <string>WEB-INF/classes/com/riseful/jesscool/AddTagToArticleServlet.class</string>
+          <string>WEB-INF/classes/com/riseful/jesscool/MemberForget.class</string>
           <string>WEB-INF/classes/com/riseful/jesscool/DoModifyArticleServlet.class</string>
           <string>WEB-INF/classes/com/riseful/jesscool/base/ConfigLoader.class</string>
           <string>WEB-INF/classes/com/riseful/jesscool/base/Env.class</string>
+          <string>WEB-INF/classes/com/riseful/jesscool/base/jesscoolConfig.properties</string>
           <string>WEB-INF/classes/com/riseful/jesscool/ViewArticleServlet.class</string>
+          <string>WEB-INF/classes/com/riseful/jesscool/ImgManagementServlet.class</string>
           <string>WEB-INF/classes/com/riseful/jesscool/ViewMoreArticlesServlet.class</string>
+          <string>WEB-INF/classes/com/riseful/jesscool/UserLogoutServlet.class</string>
           <string>WEB-INF/classes/com/riseful/jesscool/RemoveArticleTagServlet.class</string>
           <string>WEB-INF/classes/com/riseful/jesscool/LogoutServlet.class</string>
+          <string>WEB-INF/classes/com/riseful/jesscool/ImgShowServlet.class</string>
           <string>WEB-INF/classes/com/riseful/jesscool/DoAddArticleServlet.class</string>
           <string>WEB-INF/classes/com/riseful/jesscool/HomeServlet.class</string>
           <string>WEB-INF/classes/com/riseful/jesscool/ArticlesUnderTagServlet.class</string>
+          <string>WEB-INF/classes/com/riseful/jesscool/imgCollectServlet.class</string>
           <string>WEB-INF/classes/com/riseful/jesscool/AddArticleServlet.class</string>
           <string>WEB-INF/classes/com/riseful/jesscool/UploadServlet.class</string>
+          <string>WEB-INF/classes/com/riseful/jesscool/tools/Set.class</string>
+          <string>WEB-INF/classes/com/riseful/jesscool/tools/PringOut.class</string>
+          <string>WEB-INF/classes/com/riseful/jesscool/tools/Check.class</string>
+          <string>WEB-INF/classes/com/riseful/jesscool/tools/Get.class</string>
+          <string>WEB-INF/classes/com/riseful/jesscool/tools/Remove.class</string>
+          <string>WEB-INF/classes/com/riseful/jesscool/imgShow.class</string>
+          <string>WEB-INF/classes/com/riseful/jesscool/ChangeImgServlet.class</string>
           <string>WEB-INF/classes/com/riseful/jesscool/AddTagServlet.class</string>
           <string>WEB-INF/classes/com/riseful/jesscool/secure/Authorizer.class</string>
           <string>WEB-INF/classes/com/riseful/jesscool/secure/AuthorizeFilter.class</string>
+          <string>WEB-INF/classes/com/riseful/ajax/UpdateImgTagServlet.class</string>
+          <string>WEB-INF/classes/com/riseful/ajax/UpdateImgServlet.class</string>
+          <string>WEB-INF/classes/com/riseful/ajax/UpdateTag.class</string>
+          <string>WEB-INF/classes/com/riseful/ajax/UpdateTagServlet.class</string>
+          <string>WEB-INF/classes/com/riseful/ajax/GetAllImgTagServlet.class</string>
+          <string>WEB-INF/classes/com/riseful/ajax/DeleteImgServlet.class</string>
+          <string>WEB-INF/classes/com/riseful/ajax/DeleteTagServlet.class</string>
+          <string>WEB-INF/classes/com/riseful/cache/UserCache$UserTicket.class</string>
+          <string>WEB-INF/classes/com/riseful/cache/UserCache.class</string>
+          <string>WEB-INF/classes/bean.xml</string>
           <string>WEB-INF/classes/log4j.xml</string>
           <string>WEB-INF/lib/jesscooljava-0.1.jar</string>
           <string>WEB-INF/lib/spring-1.2.6.jar</string>

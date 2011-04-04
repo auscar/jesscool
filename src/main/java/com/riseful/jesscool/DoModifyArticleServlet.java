@@ -38,9 +38,9 @@ public class DoModifyArticleServlet extends HttpServlet {
 		
 		try {
 			if(ret>0){
-				res.getWriter().println("{code:0,msg:'sus'}");
+				res.getWriter().println("{\"code\":\"0\",\"msg\":\"sus\"}");
 			}else{
-				res.getWriter().println("{code:2,msg:'fail'}");
+				res.getWriter().println("{\"code\":\"2\",\"msg\":\"faild\"}");
 			}
 		} catch (IOException e) {
 			e.printStackTrace();

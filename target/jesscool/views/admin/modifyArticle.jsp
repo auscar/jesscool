@@ -4,8 +4,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<link rel="stylesheet" type="text/css" midia="all" href="http://s.jesscool.com/csspro/reset-grids.css">
-		<link rel="stylesheet" type="text/css" midia="all" href="http://s.jesscool.com/csspro/index.css">
+		<link rel="stylesheet" type="text/css" media="all" href="http://s.jesscool.com/csspro/reset-grids.css"/>
+		<link rel="stylesheet" type="text/css" media="all" href="http://s.jesscool.com/csspro/index.css"/>
 		<script type="text/javascript" src="http://s.jesscool.com/jspro/base.js"></script>
 		<script type="text/javascript" src="http://s.jesscool.com/seditor/swfupload.js"></script>
 		<title>Jesscool</title>
@@ -13,12 +13,6 @@
 			var article_info_obj = {
 				content : ''
 			}
-
-			
-
-			
-			
-
 		</script>
 		<style type="text/css"></style>
 	</head>
@@ -26,7 +20,7 @@
 		<div class="page">
 			<%@ include file="include/manage_header.inc" %>
 			<form id="article_form" method="post" action="doModifyArticle">
-				<p><label for="article_title">标题</label><input id="article_title" type="text" name="articleTitle" value="${article.title}"/><span id="upload_btn">upload</span></p>
+				<p><label for="article_title">文章标题</label><input id="article_title" type="text" name="articleTitle" value="${article.title}"/><span id="upload_btn">upload</span></p>
 				<%--
 				<p><label for="article_title">Tag id</label><input id="article_tag_id" type="text" name="articleTagId" value="${article.tag.id}"/></p>
 				--%>
@@ -34,12 +28,12 @@
 				<input id="article_body" name="articleBody" type="hidden"/>
 				<input id="article_id" name="articleId" type="hidden" value="${article.id}"/>
 				<p>
-					<label for="postUrl">封面地址</label><input id="post_url" name="postUrl" type="text" size="100"  value="${article.cover}" /><span id="post_url_btn" >上传封面图片</span>
+					<label for="postUrl">封面地址</label><input id="post_url" name="postUrl" type="text" size="93"  value="${article.cover}" /><span id="post_url_btn" >上传封面图片</span>
 				</p>
 				
 				<iframe ID="seditor" name="seditor" src="../seditor/seditor.html" frameborder="0" scrolling="no" width="100%" HEIGHT="362px"></iframe>
 				<p>
-					<input id="seditor_submit" type="button" value="提交">
+					<input id="seditor_submit" type="button" value="提交"/>
 				</p>
 			</form>
 		</div>	
@@ -51,15 +45,16 @@
 		</div>
 	<script type="text/javascript" src="http://s.jesscool.com/jspro/pages/jc.page.modifyArticle.js"></script>
 	<script type="text/javascript">
+	try{
 		var swfup = new SWFUpload({
 	        upload_url : "http://www.jesscool.com/upload.do",
 	        flash_url : "http://www.jesscool.com/seditor/swfupload.swf",
 	        file_size_limit : "4 MB",
 	        button_placeholder_id : "upload_btn",
-	        //button_image_url : "http://www.swfupload.org/button_sprite.png", 
+	        button_image_url : "http://s.xnimg.cn/imgpro/editor/image.gif", 
 	        button_width : 61, 
 	        button_height : 22, 
-	        button_text : '<b><<local Image</b>' ,
+	        button_text : '<b>local Image</b>' ,
 	        file_queued_handler : function(){
 	                this.startUpload();
 	        },
@@ -77,12 +72,16 @@
 	                
 	        }
 		});
+	}catch(e){
+		alert(e);
+	}
+		
 		var postUp = new SWFUpload({
 	        upload_url : "http://www.jesscool.com/upload.do",
 	        flash_url : "http://www.jesscool.com/seditor/swfupload.swf",
 	        file_size_limit : "4 MB",
 	        button_placeholder_id : "post_url_btn",
-	        //button_image_url : "http://www.swfupload.org/button_sprite.png", 
+	        button_image_url : "http://s.xnimg.cn/imgpro/editor/image.gif", 
 	        button_width : 61, 
 	        button_height : 22, 
 	        button_text : '<b>Post Image</b>' ,

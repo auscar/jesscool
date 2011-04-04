@@ -7,3 +7,4 @@
 <link href="http://s.jesscool.com/csspro/layout.css" type="text/css" rel="stylesheet" />
 <link href="http://s.jesscool.com/csspro/beauty.css" type="text/css" rel="stylesheet" />
 <link href="http://s.jesscool.com/csspro/common.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="http://s.jesscool.com/jspro/jquery-1.4.min.js"></script>

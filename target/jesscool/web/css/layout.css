@@ -50,7 +50,7 @@
 
 #ad{width:150px;height:48px; position:absolute;top:20px;right:260px;}
 
-#nav2{width:175px;height:25px; position:absolute;top:27px;right:45px;}
+#nav2{width:125px;height:25px; position:absolute;top:27px;right:0px;}
 #nav2 ul{height:25px;}
 #nav2 ul li{float:left;} 
 /*-- style for logo,ad,nav2,banner end --*/

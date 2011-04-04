@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.riseful.jesscool.tools.Check;
+import com.riseful.jesscool.tools.Get;
 import com.riseful.jesscooljava.base.Util;
 import com.riseful.jesscooljava.entity.Article;
 import com.riseful.jesscooljava.entity.Tag;
@@ -37,6 +39,12 @@ public class ViewArticleServlet extends HttpServlet {
 		System.out.println("acticle content : "+article.getContent());
 		req.setAttribute("article",	article);
 		req.setAttribute("sideBarMap", sideBarMap);
+		if( Check.checkLogin(req.getCookies()) ){
+			req.setAttribute("gallery", "<li><a href='http://www.jesscool.com/imgShow.do'>我的图库</a></li>");
+			req.setAttribute("loginStatus", "<li>欢迎您回来，<a href='http://www.jesscool.com/imgShow.do'>" + Get.GetCookie("userCookieName", req.getCookies()) + "</a></li><li><a href='userLogout.do'>退出</a></li>");
+		}else{
+			req.setAttribute("loginStatus", "<li><a href='http://www.jesscool.com/views/userRegister.jsp'>注册</a></li><li><a href='http://www.jesscool.com/views/userLogin.jsp'>登录</a></li>");
+		}
 		
 		try {
 			rd.forward(req, res);

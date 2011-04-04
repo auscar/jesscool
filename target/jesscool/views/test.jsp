@@ -6,7 +6,10 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	</head>
 	<body>
-		<c:out value="hello world" default="good" /><br/>
-		<c:out value="${header['User-Agent']}"/>
+		<!--<c:out value="hello world" default="good" /><br/>-->
+		
+		<c:forEach var="imgTag" items="${imgTag}">
+			${ imgTag.imgTagName } <br />		
+		</c:forEach>
 	</body>
 </html>

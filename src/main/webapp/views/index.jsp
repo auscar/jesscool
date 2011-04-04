@@ -45,7 +45,7 @@
 					</dl>
 					
 					<div class="han_style con_spacer">
-						<h1 class="oumei" style="text-indent:-9999px;">${kind.key.name}</h1>
+						<h1 class="han" style="text-indent:-9999px;">${kind.key.name}</h1>
 						<c:forEach var="kind" items="${kerioa}">
 					
 						<p class="con_spacer15">${kind.key.description}</p>
@@ -116,45 +116,6 @@
 						</div>
 						
 					</div>
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					<!--
-					<div class="han_style con_spacer">
-						<h1 class="oumei">欧美风</h1>
-						<p class="con_spacer15">韩国服装擅长于展现色彩变化，单这一点已经很能博得一大批年轻人的欢心.</p>
-						
-						<ul class="clearFloat con_spacer15">
-							<li><a href="#">这款男装搭配时尚和成熟兼容</a></li>
-							<li><a href="#">这款搭配运动型，适合喜欢运动和阳光的你</a></li>
-							<li><a href="#">冷酷有型哦，很适合追求个性和时尚的男生</a></li>
-							<li><a href="#">冷酷有型哦，很适合追求个性和时尚的男生</a></li>
-						</ul>
-						
-						<div class="clearFloat han_example_box">
-							<dl>
-								<dt><img src="http://s.jesscool.com/imgpro/han_pic1.jpg" /></dt>
-								<dd>这款男装搭配很韩式^_^ 如果你想女孩子们的关注，这款2010年冬季男装搭配绝对不要错过。</dd>
-							</dl>
-							<dl>
-								<dt><img src="http://s.jesscool.com/imgpro/han_pic2.jpg" /></dt>
-								<dd>这款男装搭配很韩式^_^ 如果你想女孩子们的关注，这款2010年冬季男装搭配绝对不要错过。</dd>
-							</dl>
-							<dl>
-								<dt><img src="http://s.jesscool.com/imgpro/han_pic3.jpg" /></dt>
-								<dd>这款男装搭配很韩式^_^ 如果你想女孩子们的关注，这款2010年冬季男装搭配绝对不要错过。</dd>
-							</dl>
-							<div class="more clear"><a href="#">>> 更多</a></div>
-						</div>
-						
-					</div>
-					-->
 				</div>
 				
 				
@@ -165,31 +126,10 @@
 				
 			</div>
 			
-			
-		<%@ include file="include/footer.inc" %>
-		<%--
-			<div id="footer">
-			
-			
-			
-			
-				<dl id="links">
-					<dt>友情链接：</dt>
-					<dd><a href="#" target="_blank">百度</a></dd>
-					<dd><a href="#" target="_blank">Google</a></dd>
-					<dd><a href="#" target="_blank">优酷</a></dd>
-					<dd><a href="#" target="_blank">懒人图库</a></dd>
-				</dl>
-				<div id="copyright">&copy; Copyright 2008 - 2010 Jesscool , Inc. All Rights Reserved</div>
-			</div>
-			 
-			 --%>
-			
-			
-			
-			
+		<%@ include file="include/header.inc"%>	
+		
 			<div id="banner">
-			<SCRIPT type=text/javascript>
+			<script type=text/javascript>
 			   var s1 = new SWFObject("http://s.jesscool.com/swf/focusFlash_fp.swf", "mymovie1", "623", "216", "5", "#ffffff");
 				var _urls = "http://www.jesscool.com/viewLook.do?lookId=1%26tagId=2|http://www.jesscool.com/viewLook.do?lookId=351%26tagId=3|http://www.jesscool.com/viewLook.do?lookId=316%26tagId=2|http://www.jesscool.com/viewLook.do?lookId=301%26tagId=5";
 				var _href = "http://www.jesscool.com/viewLook.do?lookId=1&amp;tagId=2|http://www.jesscool.com/viewLook.do?lookId=351&amp;tagId=3|http://www.jesscool.com/viewLook.do?lookId=316&amp;tagId=2|http://www.jesscool.com/viewLook.do?lookId=355&amp;tagId=5";
@@ -203,30 +143,13 @@
 			   s1.addVariable("width", "623");
 			   s1.addVariable("height", "216");
 			   s1.write("banner");
-			 </SCRIPT>
+			 </script>
 			</div>
 			
-			
-			<%@ include file="include/header.inc"%>
+			<%@ include file="include/footer.inc" %>
 			
 			<div id="extra1"></div>
 			<div id="extra2"></div>
 		</div>
 	</body>
 </html>
-
-
-
-<%--
-		<dl>
-		<c:forEach var="kind" items="${sideBarMap}">
-			<dt><h3>${kind.key}</h3></dt>
-			<c:forEach var="article" items="${kind.value}">
-				<dd><h4>${article.title}(id:${article.id})</h4><dd>
-				<dd>${article.content}<dd>
-				<dd>(${article.intime})<dd>
-			</c:forEach>
-		</c:forEach>
-		</dl>
-
---%>

@@ -44,44 +44,14 @@
 				</div>
 				
 			</div>
-		
-		<%@ include file="include/footer.inc" %>
-		<%--
-		
-		<div id="footer">
-				<dl id="links">
-					<dt>友情链接：</dt>
-					<dd><a href="#" target="_blank">百度</a></dd>
-					<dd><a href="#" target="_blank">Google</a></dd>
-					<dd><a href="#" target="_blank">优酷</a></dd>
-					<dd><a href="#" target="_blank">懒人图库</a></dd>
-				</dl>
-				<div id="copyright">&copy; Copyright 2008 - 2010 Jesscool , Inc. All Rights Reserved</div>
-			</div>
-		
-		 --%>
-			
 			
 			<%@ include file="include/header.inc"%>
 			
+			<%@ include file="include/footer.inc" %>
+					
 			<div id="extra1"></div>
 			<div id="extra2"></div>
 		</div>
 	</body>
 </html>
 
-
-
-<%--
-		<dl>
-		<c:forEach var="kind" items="${sideBarMap}">
-			<dt><h3>${kind.key}</h3></dt>
-			<c:forEach var="article" items="${kind.value}">
-				<dd><h4>${article.title}(id:${article.id})</h4><dd>
-				<dd>${article.content}<dd>
-				<dd>(${article.intime})<dd>
-			</c:forEach>
-		</c:forEach>
-		</dl>
-
---%>
