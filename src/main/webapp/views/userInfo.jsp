@@ -15,12 +15,12 @@
 			<div id="header">
 		    	<ul id="quickLink">
 		        	<li><a href="/home.do">首页</a></li>
-		            <li><a href="/views/profile.jsp">衣酷管理</a></li>
+		            <li><a href="/profile.do">衣酷管理</a></li>
 		            <li><a href="#">我们的微薄</a></li>
 		        </ul>
 		        <ul id="login">
-		        	<li><a href="/views/register.jsp">注册</a></li>
-		            <li><a href="/views/login.jsp">登录</a></li>
+		        	<li><a href="/views/userRegister.jsp">注册</a></li>
+		            <li><a href="/views/userLogin.jsp">登录</a></li>
 		        </ul>
 		        <div id="logo"><a href="/home.do"><img src="http://s.jesscool.com/imgpro/logo.gif" /></a></div>
 			</div>
@@ -31,11 +31,11 @@
 		                <div class="userLogin userInfo">
 		                    <h2 class="loginTitle">信息管理</h2>
 		                    <p class="loginDec">您可以修改以下信息，</p>
-		                    <ul class="userInfo-form">
-		                        <li><label>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</label><input class="loginPwd loginInput" type="password" /></li>
-		                        <li><label>密码确认：</label><input class="loginPwd loginInput" type="text" /></li>
-		                        <li><label>身&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;高：</label><input class="loginPwd loginInput" type="text" /></li>
-		                        <li><label>体&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;重：</label><input class="loginPwd loginInput" type="text" /></li>
+		                    <ul class="userInfo-form loginForm">
+		                        <li><label>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</label><input class="text-input loginPwd loginInput" type="password" /></li>
+		                        <li><label>密码确认：</label><input class="text-input loginPwd loginInput" type="text" /></li>
+		                        <li><label>身&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;高：</label><input class="text-input loginPwd loginInput" type="text" /></li>
+		                        <li><label>体&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;重：</label><input class="text-input loginPwd loginInput" type="text" /></li>
 		                        <li>
 		                            <input class="userInfoSubmit" type="image" src="http://s.jesscool.com/imgpro/submit.gif" />
 		                            <input type="reset" class="registerReset" value="重置" />
@@ -50,6 +50,8 @@
 		    	&copy; Copyright 2008 - 2010 Jesscool
 		    </div>
 		    
+		    <script src="http://s.jesscool.com/jspro/jquery-1.4.2.min.js"></script>
+			<script src="http://s.jesscool.com/jspro/form.js"></script>
 			<div class="count"><%@ include file="include/footer.inc" %></div>
 		</div>	
 		

@@ -31,7 +31,7 @@
 		                <div class="article">
 		                    <h2 class="articleTitle">您的专属衣柜<span>//2011.04.2</span></h2>
 		                    <div class="articleDetail">
-		                    	<div class="detialText">
+		                    	<div class="detailText">
 		                    		<c:forEach var="imgTagImgs" items="${ imgTagImgs }">
 						        		<img src="http://s.jesscool.com/upload/${ imgTagImgs.imgUrl }" imgId="${ imgTagImgs.id }" />
 						        		<p>当下的情侣款牛仔裤，不再限于款式的雷同，细节上的呼应才是全新的趋势。</p>
@@ -47,7 +47,7 @@
 		        </div>
 		        <div id="sidebar">
 		            <ul id="articleType">
-		            	<li class="selected"><a href="#">阳光运动</a></li>
+		            	<!-- <li class="selected"><a href="#">阳光运动</a></li>  -->
 		            	<c:forEach var="imgTags" items="${ imgTags }">
 	            			<li class="imgNav1_li"><a href="#" tagId="${ imgTags.imgTagId }"><span>${ imgTags.imgTagName }</span></a></li>
 	            		</c:forEach>
@@ -61,6 +61,7 @@
 		    </div>
 		    <script src="http://s.jesscool.com/jspro/jquery-1.4.2.min.js"></script>
 			<script src="http://s.jesscool.com/jspro/common.js"></script>
+			<script src="http://s.jesscool.com/jspro/profile.js"></script>
 			<div class="count"><%@ include file="include/footer.inc" %></div>
 		</div>
 		
