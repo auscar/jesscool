@@ -4,152 +4,102 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<%@ include file="include/head.inc" %>
-		<script src="http://s.jesscool.com/jspro/common.js" type="text/javascript"></script>
-		<script src="http://s.jesscool.com/jspro/swfobject_source.js" type="text/javascript"></script>
-		<title>Jesscool-男士形象专家</title>
+		<link href="http://s.jesscool.com/csspro/layout.css" type="text/css" rel="stylesheet" />
+		<title>Jesscool-男士形象顾问</title>
 	</head>
 	<body>
-		<div id="container">
-		
-			<div id="header"></div>
-		
-			<div id="main" class="clearFloat">
-				
-				<div id="content">
-					
-					<div id="hot_style" class="con_spacer">
-						
-						<div>
-							<c:forEach var="kind" items="${hots}">
-							<h1 style="text-indent:-9999px;">${kind.key.name}</h1>
-								<c:forEach var="article" items="${kind.value}">
-									<dl>
-										<dt><a target="_blank" href="viewLook.do?lookId=${article.id}&tagId=${kind.key.id}"><img width="100" height="100" src="${article.cover}" /></a></dt>
-										<dd><a target="_blank" href="viewLook.do?lookId=${article.id}&tagId=${kind.key.id}">${article.title}</a></dd>
-									</dl>
-								</c:forEach>
-							</c:forEach>
-						</div>
-					</div>
-					
-					<dl id="dec_style" class="con_spacer">
-						<c:forEach var="kind" items="${peishi}">
-								<dt><a target="_blank" href="http://www.jesscool.com/moreLook.do?tagId=${kind.key.id}"><input name="" type="image" src="http://s.jesscool.com/imgpro/more_dec.jpg" /></a></dt>
-								<c:forEach var="article" items="${kind.value}" varStatus="status">
-								
-									<dd><a title="${article.title}" target="_blank" href="http://www.jesscool.com/viewLook.do?lookId=${article.id}&tagId=${kind.key.id}"><img src="${article.cover}" width="80" height="80" /></a></dd>
-									
-								</c:forEach>
-						</c:forEach>
-						
-					</dl>
-					
-					<div class="han_style con_spacer">
-						<h1 class="han" style="text-indent:-9999px;">${kind.key.name}</h1>
-						<c:forEach var="kind" items="${kerioa}">
-					
-						<p class="con_spacer15">${kind.key.description}</p>
-						<ul class="clearFloat con_spacer15">
-								
-								<c:forEach var="article" items="${kind.value}">
-								
-									<li><a target="_blank" href="viewLook.do?lookId=${article.id}&tagId=${kind.key.id}">${article.title}</a></li>
-									
-								</c:forEach>
-						
-						</ul>
-						</c:forEach>
-						
+		<div id="box">
 
-						
-						<div class="clearFloat han_example_box">
-							<c:forEach var="kind" items="${kerioa_special}">
-									<c:forEach var="article" items="${kind.value}">
-									
-										<dl>
-											<dt><a target="_blank" href="viewLook.do?lookId=${article.id}&tagId=${kind.key.id}"><img src="${article.cover}" /></a></dt>
-											<dd><a target="_blank" href="viewLook.do?lookId=${article.id}&tagId=${kind.key.id}">${article.title}</a></dd>
-										</dl>
-										
-									</c:forEach>
-									
-									<div class="more clear"><a target="_blank" href="moreLook.do?tagId=${kind.key.id}">>> 更多</a></div>
-									
-							</c:forEach>
-						</div>
-						
-					</div>
-					
-					<div class="han_style con_spacer">
-						
-						
-						<c:forEach var="kind" items="${europe}">
-						<h1 class="oumei">${kind.key.name }</h1>
-						<p class="con_spacer15">${kind.key.description}</p>
-						<ul class="clearFloat con_spacer15">
-								
+			<div id="header">
+		    	<ul id="quickLink">
+		        	<li><a href="/home.do">首页</a></li>
+		            <li><a href="/profile.do">我的衣酷</a></li>
+		            <li><a href="#">我们的微薄</a></li>
+		        </ul>
+		        <ul id="login">
+		        	${ loginStatus }
+		        </ul>
+		        <div id="logo"><a href="/home.do"><img src="http://s.jesscool.com/imgpro/logo.gif" /></a></div>
+		    </div>
+		    
+		    <div id="wrapper">
+		    	<div id="main">
+		        	<div class="articleBox">
+		                <div class="article">
+		                    <h2 class="articleTitle">
+		                    	<a href="/views/articleDetail.jsp">爱意大胆穿出来 教你情侣如何着装</a>
+		                    </h2>
+		                    <div class="articleDec">
+		                    	<a href="/views/articleDetail.jsp">不再含蓄，不再私密。感情的表达早已不同昔日，有情话就要大胆说出来，有爱意就要大胆穿出来。穿情侣装就是表达爱意最为时尚的方式！……</a>
+		                    </div>
+		                    <div class="articleImg">
+		                        <a href="/views/articleDetail.jsp"><img src="http://s.jesscool.com/imgpro/articleImg1.jpg" /></a>
+		                        <dl class="articleDate">
+		                            <dt>04/02</dt>
+		                            <dd>2011</dd>
+		                        </dl>
+		                    </div>   
+		                </div>
+		                <div class="article">
+		                    <h2 class="articleTitle">
+		                    	<a href="/views/articleDetail.jsp">爱意大胆穿出来 教你情侣如何着装</a>
+		                    </h2>
+		                    <div class="articleDec">
+		                    	<a href="/views/articleDetail.jsp">不再含蓄，不再私密。感情的表达早已不同昔日，有情话就要大胆说出来，有爱意就要大胆穿出来。穿情侣装就是表达爱意最为时尚的方式！……</a>
+		                    </div>
+		                    <div class="articleImg noBorder">
+		                        <a href="/views/articleDetail.jsp"><img src="http://s.jesscool.com/imgpro/articleImg2.jpg" /></a>
+		                        <dl class="articleDate">
+		                            <dt>04/02</dt>
+		                            <dd>2011</dd>
+		                        </dl>
+		                    </div>   
+		                </div>
+		            </div>
+		        </div>
+		        <div id="sidebar">
+		        	<div id="search">
+		            	<div class="search-input">
+		                	<input type="text" class="searchInput" />
+		                </div>
+		                <div class="search-button">
+		                	<input type="image" src="http://s.jesscool.com/imgpro/searchBtm.gif" class="searchBtm" />
+		                </div>
+		            </div>
+		            <ul id="articleType">
+		            	<li class="selected"><a href="#">阳光运动</a></li>
+		                <li><a href="#">配饰精彩</a></li>
+		                <li><a href="#">约会聚会</a></li>
+		                <li><a href="#">商务职场</a></li>
+		                <li><a href="#">形象学院</a></li>
+		                <li><a href="#">本周专题</a></li>
+		            </ul>
+		            <div class="hotCase">
+		            	<h2 class="hotCase-title">热门方案</h2>
+		                <ul class="hotCase-lists clearFloat">
+		                	<c:forEach var="kind" items="${hots}">
 								<c:forEach var="article" items="${kind.value}">
-								
-									<li><a target="_blank" href="viewLook.do?lookId=${article.id}&tagId=${kind.key.id}">${article.title}</a></li>
-									
+									<li class="hotCase-lists-li">
+				                    	<a target="_blank" href="viewLook.do?lookId=${article.id}&tagId=${kind.key.id}"><img class="hotCase-img" src="${article.cover}" /></a>
+				                        <div class="hotCase-div">
+				                        	<p class="title"><a target="_blank" href="viewLook.do?lookId=${article.id}&tagId=${kind.key.id}">${article.title}</a></p>
+				                            <p class="date">2011-04-02</p>
+				                        </div>
+				                    </li>
 								</c:forEach>
-						
-						</ul>
-						</c:forEach>
-						
-
-						
-						<div class="clearFloat han_example_box">
-							<c:forEach var="kind" items="${europe_special}">
-									<c:forEach var="article" items="${kind.value}">
-									
-										<dl>
-											<dt><a target="_blank" href="viewLook.do?lookId=${article.id}&tagId=${kind.key.id}"><img src="${article.cover}" /></a></dt>
-											<dd><a target="_blank" href="viewLook.do?lookId=${article.id}&tagId=${kind.key.id}">${article.title}</a></dd>
-										</dl>
-										
-									</c:forEach>
-									
-									<div class="more clear"><a target="_blank" href="moreLook.do?tagId=${kind.key.id}">>> 更多</a></div>
-									
 							</c:forEach>
-						</div>
-						
-					</div>
-				</div>
-				
-				
-				<div id="sidebar">
-					
-					<%@ include file="include/sidebar.inc" %>
-				</div>
-				
-			</div>
-			
-		<%@ include file="include/header.inc"%>	
-		
-			<div id="banner">
-			<script type=text/javascript>
-			   var s1 = new SWFObject("http://s.jesscool.com/swf/focusFlash_fp.swf", "mymovie1", "623", "216", "5", "#ffffff");
-				var _urls = "http://www.jesscool.com/viewLook.do?lookId=1%26tagId=2|http://www.jesscool.com/viewLook.do?lookId=351%26tagId=3|http://www.jesscool.com/viewLook.do?lookId=316%26tagId=2|http://www.jesscool.com/viewLook.do?lookId=301%26tagId=5";
-				var _href = "http://www.jesscool.com/viewLook.do?lookId=1&amp;tagId=2|http://www.jesscool.com/viewLook.do?lookId=351&amp;tagId=3|http://www.jesscool.com/viewLook.do?lookId=316&amp;tagId=2|http://www.jesscool.com/viewLook.do?lookId=355&amp;tagId=5";
-				s1.addParam("wmode", "transparent");
-			   s1.addParam("AllowscriptAccess", "sameDomain");
-			   s1.addVariable("bigSrc", "http://s.jesscool.com/imgpro/01.jpg?ver=2|http://s.jesscool.com/imgpro/02.jpg?ver=2|http://s.jesscool.com/imgpro/03.jpg?ver=2|http://s.jesscool.com/imgpro/04.jpg?ver=2");
-			   s1.addVariable("smallSrc", "|images/06.jpg|||");
-			   s1.addVariable("href", _urls);
-			   s1.addVariable("urls", _urls);
-			   s1.addVariable("txt", "Jessful|Jessful|Jessful|Jessful");
-			   s1.addVariable("width", "623");
-			   s1.addVariable("height", "216");
-			   s1.write("banner");
-			 </script>
-			</div>
-			
-			<%@ include file="include/footer.inc" %>
-			
-			<div id="extra1"></div>
-			<div id="extra2"></div>
+		                </ul>
+		            </div>
+		        </div>
+		    </div>
+		    
+		    <div id="footer">
+		    	&copy; Copyright 2008 - 2010 Jesscool
+		    </div>
+		 <script src="http://s.jesscool.com/jspro/jquery-1.4.2.min.js"></script>
+		 <script src="http://s.jesscool.com/jspro/common.js"></script>   
+		<div class="count"><%@ include file="include/footer.inc" %></div>
 		</div>
+		
 	</body>
 </html>

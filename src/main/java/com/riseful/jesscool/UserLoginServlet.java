@@ -44,7 +44,7 @@ public class UserLoginServlet extends HttpServlet {
 		String userPwd = req.getParameter("userPwd");
 
 		//设置登录成功后跳转的到的页面
-		String susUri = "imgShow.do";
+		String susUri = "profile.do";
 		String faildUri = "/views/userLogin.jsp";
 		
 		//设置分发器的值

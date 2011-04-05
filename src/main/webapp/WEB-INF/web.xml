@@ -136,8 +136,8 @@
 		<servlet-class>com.riseful.jesscool.MemberForget</servlet-class>
 	</servlet>
 	<servlet>
-		<servlet-name>ImgShowServlet</servlet-name>
-		<servlet-class>com.riseful.jesscool.ImgShowServlet</servlet-class>
+		<servlet-name>ProfileServlet</servlet-name>
+		<servlet-class>com.riseful.jesscool.ProfileServlet</servlet-class>
 	</servlet>
 	<servlet>
 		<servlet-name>ChangeImgServlet</servlet-name>
@@ -156,8 +156,8 @@
 		<servlet-class>com.riseful.jesscool.UserLogoutServlet</servlet-class>
 	</servlet>
 	<servlet>
-		<servlet-name>ImgManagementServlet</servlet-name>
-		<servlet-class>com.riseful.jesscool.ImgManagementServlet</servlet-class>
+		<servlet-name>ProfileManagementServlet</servlet-name>
+		<servlet-class>com.riseful.jesscool.ProfileManagementServlet</servlet-class>
 	</servlet>
 	<servlet>
 		<servlet-name>UpdateImgTagServlet</servlet-name>
@@ -253,8 +253,8 @@
 		<url-pattern>/memberForget.do</url-pattern>    
     </servlet-mapping>
     <servlet-mapping>
-		<servlet-name>ImgShowServlet</servlet-name>
-		<url-pattern>/imgShow.do</url-pattern>    
+		<servlet-name>ProfileServlet</servlet-name>
+		<url-pattern>/profile.do</url-pattern>    
     </servlet-mapping>
     <servlet-mapping>
 		<servlet-name>ChangeImgServlet</servlet-name>
@@ -273,8 +273,8 @@
 		<url-pattern>/userLogout.do</url-pattern>    
     </servlet-mapping>
     <servlet-mapping>
-		<servlet-name>ImgManagementServlet</servlet-name>
-		<url-pattern>/imgManagement.do</url-pattern>    
+		<servlet-name>ProfileManagementServlet</servlet-name>
+		<url-pattern>/profileManagement.do</url-pattern>    
     </servlet-mapping>
     <servlet-mapping>
 		<servlet-name>UpdateImgTagServlet</servlet-name>

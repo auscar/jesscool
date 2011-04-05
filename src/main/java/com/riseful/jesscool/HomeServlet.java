@@ -49,8 +49,7 @@ public class HomeServlet extends HttpServlet {
 		req.setAttribute("europe_special", europe_special);
 		
 		if( Check.checkLogin(req.getCookies()) ){
-			req.setAttribute("gallery", "<li><a href='http://www.jesscool.com/imgShow.do'>我的图库</a></li>");
-			req.setAttribute("loginStatus", "<li>欢迎您回来，<a href='http://www.jesscool.com/imgShow.do'>" + Get.GetCookie("userCookieName", req.getCookies()) + "</a></li><li><a href='userLogout.do'>退出</a></li>");
+			req.setAttribute("loginStatus", "<li>哟，您来啦，" + Get.GetCookie("userCookieName", req.getCookies()) + "</li><li><a href='userLogout.do'>退出</a></li>");
 		}else{
 			req.setAttribute("loginStatus", "<li><a href='http://www.jesscool.com/views/userRegister.jsp'>注册</a></li><li><a href='http://www.jesscool.com/views/userLogin.jsp'>登录</a></li>");
 		}

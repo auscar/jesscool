@@ -21,7 +21,7 @@ public class LogoutServlet extends HttpServlet {
 		HttpSession session = req.getSession();
 		session.setAttribute("loginUser", null);
 		
-		String uri = "/views/login.jsp";
+		String uri = "/views/userLogin.jsp";
 	
 	
 		try {

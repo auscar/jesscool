@@ -51,10 +51,10 @@ public class RegisterServlet extends HttpServlet {
 			}else{
 				userNew.setName(userName);
 				userNew.setPwd(userPwd);
-				userNew.setUserHeight(userHeight);
-				userNew.setUserGender(userGender);
+				userNew.setUserHeight(Integer.parseInt(userHeight));
+				userNew.setUserGender(Boolean.parseBoolean(userGender));
 				userNew.setUserPhone(userPhone);
-				userNew.setUserWeight(userWeight);
+				userNew.setUserWeight(Integer.parseInt(userWeight));
 				
 				//往数据库写资料
 				service.addUser(user);
