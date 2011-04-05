@@ -32,7 +32,7 @@
 		                <div class="article">
 		                    <h2 class="articleTitle">您的专属衣柜<span>//2011.04.2</span></h2>
 		                    <div class="articleDetail">
-		                    	<div class="detialText">
+		                    	<div class="detailText">
 		                            <img src="http://s.jesscool.com/imgpro/articleImg1.jpg" />
 		                            <p>穿情侣装就是表达爱意最为时尚的方式！</p>
 		                            <img src="http://s.jesscool.com/imgpro/articleImg2.jpg" />

@@ -15,12 +15,12 @@
 			<div id="header">
 		    	<ul id="quickLink">
 		        	<li><a href="/home.do">首页</a></li>
-		            <li><a href="/views/profile.jsp">衣酷管理</a></li>
+		            <li><a href="/profile.do">衣酷管理</a></li>
 		            <li><a href="#">我们的微薄</a></li>
 		        </ul>
 		        <ul id="login">
-		        	<li><a href="/views/register.jsp">注册</a></li>
-		            <li><a href="/views/login.jsp">登录</a></li>
+		        	<li><a href="/views/userRegister.jsp">注册</a></li>
+		            <li><a href="/views/userLogin.jsp">登录</a></li>
 		        </ul>
 		        <div id="logo"><a href="/home.do"><img src="http://s.jesscool.com/imgpro/logo.gif" /></a></div>
 			</div>
