@@ -1,20 +1,19 @@
 package com.riseful.jesscool;
 
-import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.riseful.jesscool.tools.Check;
-import com.riseful.jesscool.tools.Get;
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import com.riseful.jesscooljava.base.Util;
 import com.riseful.jesscooljava.entity.Article;
-import com.riseful.jesscooljava.entity.Tag;
 import com.riseful.jesscooljava.service.JesscoolService;
 
 public class ViewMoreArticlesServlet extends HttpServlet {
@@ -29,25 +28,31 @@ public class ViewMoreArticlesServlet extends HttpServlet {
 		//获取所需类别的文章
 		Map<String,List<Article>> articleSets = service.getSimpleArticleDigestsByTagIds(new int[]{Integer.parseInt(tagId)},-1,180);
 		
-		Map<Tag,List<Article>> sideBarMap = service.getSimpleArticlesWithTagByTagIds(new int[]{1,2,3,4,5,12},8);
-		
-		//将从后台服务获取的数据放到request当中, 以便JSP使用
-		req.setAttribute("articleSets", articleSets);
-		req.setAttribute("sideBarMap", sideBarMap);
-		if( Check.checkLogin(req.getCookies()) ){
-			req.setAttribute("gallery", "<li><a href='http://www.jesscool.com/imgShow.do'>我的图库</a></li>");
-			req.setAttribute("loginStatus", "<li>欢迎您回来，<a href='http://www.jesscool.com/imgShow.do'>" + Get.GetCookie("userCookieName", req.getCookies()) + "</a></li><li><a href='userLogout.do'>退出</a></li>");
-		}else{
-			req.setAttribute("loginStatus", "<li><a href='http://www.jesscool.com/views/userRegister.jsp'>注册</a></li><li><a href='http://www.jesscool.com/views/userLogin.jsp'>登录</a></li>");
-		}
-		
-		//转向index.jsp
-		RequestDispatcher rd = req.getRequestDispatcher("/views/moreLook.jsp");
+		//返回json数据
+		JSONObject obj = new JSONObject();
+		JSONObject temp = null;
+		JSONArray temp_ary = null;
+		Set<String> keys = articleSets.keySet();
 		try {
-			rd.forward(req, res);
-		} catch (ServletException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
+			for( String key : keys ){
+				temp_ary = new JSONArray();
+				for( Article art : articleSets.get(key) ){
+					temp = new JSONObject();
+					temp.put("title", art.getTitle())
+						.put("content", art.getContent())
+						.put("cover", art.getCover())
+						.put("firstImg", art.getFirstImg())
+						.put("intime", art.getIntime())
+						.put("id", art.getId());
+					temp_ary.put(temp);
+				}
+				obj.put("ary",temp_ary);
+			}
+			res.setCharacterEncoding("UTF-8");
+			res.setContentType("text/html;charset=UTF-8");
+			res.getWriter().println(obj.toString());
+			
+		}catch (Exception e){
 			e.printStackTrace();
 		}
 	}
