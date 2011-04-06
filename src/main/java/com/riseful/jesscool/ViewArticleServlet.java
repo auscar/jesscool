@@ -29,22 +29,23 @@ public class ViewArticleServlet extends HttpServlet {
 
 		Article article = service.getSimpleArticleByIdAndTagId(Integer.parseInt(articleId), Integer.parseInt(tagId));
 		
-		Map<Tag,List<Article>> sideBarMap = service.getSimpleArticlesWithTagByTagIds(new int[]{1,2,3,4,5,12},8);
+		//获取本周专题的文章
+		Map<Tag,List<Article>> weekTopics = service.getSimpleArticlesWithTagByTagIds(new int[]{1},30);
 		
+		//Map<Tag,List<Article>> sideBarMap = service.getSimpleArticlesWithTagByTagIds(new int[]{1,2,3,4,5,12},8);
 		
-		System.out.println("&&&&&&&&&&&&& content : "+article.getTitle());
-		//System.out.println("&&&&&&&&&&&&& content : "+article.getTag().getName());
+		//将从后台服务获取的数据放到request当中, 以便JSP使用
+		req.setAttribute("weekTopics", weekTopics);
+		req.setAttribute("article", article);
 		
-		RequestDispatcher rd = req.getRequestDispatcher("/views/viewLook.jsp");
-		System.out.println("acticle content : "+article.getContent());
-		req.setAttribute("article",	article);
-		req.setAttribute("sideBarMap", sideBarMap);
 		if( Check.checkLogin(req.getCookies()) ){
-			req.setAttribute("gallery", "<li><a href='http://www.jesscool.com/imgShow.do'>我的图库</a></li>");
-			req.setAttribute("loginStatus", "<li>欢迎您回来，<a href='http://www.jesscool.com/imgShow.do'>" + Get.GetCookie("userCookieName", req.getCookies()) + "</a></li><li><a href='userLogout.do'>退出</a></li>");
+			req.setAttribute("loginStatus", "<li>哟，您来啦，" + Get.GetCookie("userCookieName", req.getCookies()) + "</li><li><a href='userLogout.do'>退出</a></li>");
 		}else{
 			req.setAttribute("loginStatus", "<li><a href='http://www.jesscool.com/views/userRegister.jsp'>注册</a></li><li><a href='http://www.jesscool.com/views/userLogin.jsp'>登录</a></li>");
 		}
+		
+		//转向index.jsp
+		RequestDispatcher rd = req.getRequestDispatcher("/views/viewLook.jsp");
 		
 		try {
 			rd.forward(req, res);

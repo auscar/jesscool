@@ -5,6 +5,8 @@
 	<head>
 		<%@ include file="include/head.inc" %>
 		<link href="http://s.jesscool.com/csspro/profile.css" type="text/css" rel="stylesheet" />
+		<link href="http://s.jesscool.com/csspro/jquery-ui.css" type="text/css" rel="stylesheet" />
+		
 		<title>Jesscool - 我的衣酷</title>
 	</head>
 	<body>
@@ -20,7 +22,7 @@
 		        <ul id="login">
 		        	<li>哟，您来啦，despair2@126.com !</li>
 		        	<li><a href="/logout.do">退出</a></li>
-		            <li><a href="/userInfo.do">信息管理</a></li>
+		            <li><a href="/views/userInfo.jsp">信息管理</a></li>
 		        </ul>
 		        <div id="logo"><a href="/home.do"><img src="http://s.jesscool.com/imgpro/logo.gif" /></a></div>
 		        <div class="recommend"><img src="http://s.jesscool.com/imgpro/recommend.gif" /> <a href="#">最新搭配推荐！</a></div>
@@ -32,10 +34,9 @@
 		                <div class="article">
 		                    <h2 class="articleTitle">您的专属衣柜<span>//2011.04.2</span></h2>
 		                    <div class="articleDetail">
-		                    	<div class="detailText">
+		                    	<div class="detailText" id="detailText">
 		                            <c:forEach var="imgTagImgs" items="${ imgTagImgs }">
 						        		<img src="http://s.jesscool.com/upload/${ imgTagImgs.imgUrl }" imgId="${ imgTagImgs.id }" />
-						        		<p>当下的情侣款牛仔裤，不再限于款式的雷同，细节上的呼应才是全新的趋势。</p>
 						        	</c:forEach>
 		                        </div>
 		                        <dl class="articleDate">
@@ -52,7 +53,12 @@
 	            			<li class="imgNav1_li"><a href="#" tagId="${ imgTags.imgTagId }"><span>${ imgTags.imgTagName }</span></a></li>
 	            		</c:forEach>
 		            </ul>
-		            
+		            <div class="someTips">
+		            	<h2>温馨提示:</h2>
+		            	<p>1.如果您想<b> 删除图片 </b>，请点击大图右侧的"X"。</p>
+		        		<p>2.如果您想<b> 编辑图片类别 </b>，请将鼠标移至上方菜单上。</p>
+		        		<p>3.如果您想<b> 改变图片所属类别 </b>，请将图片拖拽到页面右侧相应分类上。</p>
+		            </div>
 		        </div>
 		    </div>
 		    
@@ -61,10 +67,10 @@
 		    </div>
 			
 		<script src="http://s.jesscool.com/jspro/jquery-1.4.2.min.js"></script>
+		<script src="http://s.jesscool.com/jspro/jquery-ui.min.js"></script>
 		<script src="http://s.jesscool.com/jspro/common.js"></script>
 		<script src="http://s.jesscool.com/jspro/profileManage.js"></script>
 		    
-		<div class="count"><%@ include file="include/footer.inc" %></div>
 		</div>
 		
 		

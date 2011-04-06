@@ -18,8 +18,8 @@
 		        </ul>
 		        <ul id="login">
 		        	<li>哟，您来啦，${ userCookieName } !</li>
-		        	<li><a href="/logout.do">退出</a></li>
-		            <li><a href="/userInfo.do">信息管理</a></li>
+		        	<li><a href="/userLogout.do">退出</a></li>
+		            <li><a href="/views/userInfo.jsp">信息管理</a></li>
 		        </ul>
 		        <div id="logo"><a href="/home.do"><img src="http://s.jesscool.com/imgpro/logo.gif" /></a></div>
 		        <div class="recommend"><img src="http://s.jesscool.com/imgpro/recommend.gif" /> <a href="#">最新搭配推荐！</a></div>
@@ -34,7 +34,6 @@
 		                    	<div class="detailText">
 		                    		<c:forEach var="imgTagImgs" items="${ imgTagImgs }">
 						        		<img src="http://s.jesscool.com/upload/${ imgTagImgs.imgUrl }" imgId="${ imgTagImgs.id }" />
-						        		<p>当下的情侣款牛仔裤，不再限于款式的雷同，细节上的呼应才是全新的趋势。</p>
 						        	</c:forEach>
 		                        </div>
 		                        <dl class="articleDate">

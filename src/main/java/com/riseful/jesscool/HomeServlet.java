@@ -23,12 +23,12 @@ public class HomeServlet extends HttpServlet {
 		//获取JesscoolJava的后台服务
 		JesscoolService service = (JesscoolService)Util.getCtx().getBean("JesscoolService");
 		
-		//获取所需类别的文章
-		Map<Tag,List<Article>> hots = service.getSimpleArticlesWithTagByTagIds(new int[]{7},5);
+		//获取本周专题的文章
+		Map<Tag,List<Article>> weekTopics = service.getSimpleArticlesWithTagByTagIds(new int[]{1},5);
 		
 		
 		//将从后台服务获取的数据放到request当中, 以便JSP使用
-		req.setAttribute("hots", hots);
+		req.setAttribute("weekTopics", weekTopics);
 		
 		if( Check.checkLogin(req.getCookies()) ){
 			req.setAttribute("loginStatus", "<li>哟，您来啦，" + Get.GetCookie("userCookieName", req.getCookies()) + "</li><li><a href='userLogout.do'>退出</a></li>");

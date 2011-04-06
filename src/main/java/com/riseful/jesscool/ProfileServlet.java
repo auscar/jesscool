@@ -66,6 +66,7 @@ public class ProfileServlet extends HttpServlet {
 				rd.forward(req, res);
 					
 			}else{  //没登录
+				req.setAttribute("loginMsg", "抱歉，您还未登录！");
 				rdFaild.forward(req, res);
 			}
 			
