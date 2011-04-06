@@ -31,5 +31,7 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="/home/auscar/repo/com/riseful/jesscooljava/0.1/jesscooljava-0.1.jar"/>
 	<classpathentry kind="lib" path="/home/auscar/programs/apache-tomcat-6.0.24/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="/home/auscar/repo/javax/mail/mail/1.4.4/mail-1.4.4.jar"/>
+	<classpathentry kind="lib" path="/home/auscar/repo/org/json/json/20090211/json-20090211.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
