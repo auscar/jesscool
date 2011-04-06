@@ -36,6 +36,7 @@
 		                    <ul class="loginForm">
 		                        <li><label>账号：</label><input name="email" id="regEmail" value="请输入邮箱" class="validate[required,custom[email]] text-input loginEmail loginInput" type="text" /></li>
 		                        <li><label>密码：</label><input id="regPassword" name="password" class="validate[required] text-input loginPwd loginInput" type="password" /></li>
+		                        <li><label>确认密码：</label><input id="regPassword2" name="passwordCon" class="validate[required,equals[regPassword]] text-input loginPwd loginInput" type="password" /></li>
 		                    </ul>
 		                    <p class="loginDec">我们将根据您的体型，为你送上适合您的服饰搭配 </p>
 		                    <ul class="loginForm">
@@ -60,7 +61,7 @@
 		<script src="http://s.jesscool.com/jspro/formValidator/js/jquery.validationEngine.js" type="text/javascript"></script>
 		<script src="http://s.jesscool.com/jspro/form.js"></script>
 		<script src="http://s.jesscool.com/jspro/login.js"></script>
-		<div class="count"><%@ include file="include/footer.inc" %></div>
+		
 		</div>	
 		
 		
