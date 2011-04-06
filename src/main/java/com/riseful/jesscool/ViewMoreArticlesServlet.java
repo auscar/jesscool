@@ -43,6 +43,7 @@ public class ViewMoreArticlesServlet extends HttpServlet {
 						.put("cover", art.getCover())
 						.put("firstImg", art.getFirstImg())
 						.put("intime", art.getIntime())
+						.put("tagId", tagId)
 						.put("id", art.getId());
 					temp_ary.put(temp);
 				}
