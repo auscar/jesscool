@@ -5,56 +5,89 @@
 	<head>
 		<%@ include file="include/head.inc" %>
 		<link href="http://s.jesscool.com/csspro/boxy.css" type="text/css" rel="stylesheet" />
-		<script src="http://s.jesscool.com/jspro/common.js" type="text/javascript"></script>
-		<script src="http://s.jesscool.com/jspro/swfobject_source.js" type="text/javascript"></script>
-		<script src="http://s.jesscool.com/jspro/jquery.boxy.js" type="text/javascript"></script>
-		<script src="http://s.jesscool.com/jspro/imgCollect.js" type="text/javascript"></script>
+		<link href="http://s.jesscool.com/csspro/layout.css" type="text/css" rel="stylesheet" />
+		<link href="http://s.jesscool.com/csspro/boxy.css" type="text/css" rel="stylesheet" />
+		
 		
 		<title>${article.title}-Jesscool!</title>
 	</head>
 	<body>
-		<div id="container">
-		
-			<div id="header"></div>
-		
-			<div id="main" class="clearFloat">
-				
-				<div id="content" class="view_look">
-					<div class="news_more">
-						<h1><a target="_blank" href="http://www.jesscool.com/moreLook.do?tagId=${article.tag.id}">${article.tag.name}</a> &gt;&gt; ${article.title}</h1>
-						
-						<div id="ckepop">
-							<span style="float:left;">分享到：</span>
-							<a title="" class="jiathis_button_renren"> </a>
-							<a class="jiathis_button_kaixin001"> </a>
-							<a class="jiathis_button_qq"> </a>
-							<a class="jiathis_button_tsina"> </a>
-							<span class="separator">|</span>
-							<a href="http://www.jiathis.com/share.html" class="jiathis button jtico jtico_more">更多</a>
-						</div>
-						<!-- JiaThis Button BEGIN -->
-						<script type="text/javascript" src="http://www.jiathis.com/code/jia.js" charset=utf-8></script>
-						<!-- JiaThis Button END -->
-						
-						<div class="article_body">
-							${article.content}
-						</div>
-					</div>
-				</div>
-				
-				
-				<div id="sidebar">
-					<%@ include file="include/sidebar.inc" %>
-				</div>
-				
-			</div>
-			
-			<%@ include file="include/header.inc"%>
-			
-			<%@ include file="include/footer.inc" %>
-			
-			<div id="extra1"></div>
-			<div id="extra2"></div>
+		<div id="box">
+
+			<div id="header">
+		    	<ul id="quickLink">
+		        	<li><a href="/home.do">首页</a></li>
+		            <li><a href="/profile.do">我的衣酷</a></li>
+		            <li><a href="#">我们的微薄</a></li>
+		        </ul>
+		        <ul id="login">
+		        	<li><a href="/views/userRegister.jsp">注册</a></li>
+		            <li><a href="/views/userLogin.jsp">登录</a></li>
+		        </ul>
+		        <div id="logo"><a href="/home.do"><img src="http://s.jesscool.com/imgpro/logo.gif" /></a></div>
+		    </div>
+		    
+		    <div id="wrapper">
+		    	<div id="main">
+		        	<div class="articleBox">
+		                <div class="article">
+		                    <h2 class="articleTitle">${article.title}</h2>
+		                    <div class="articleDetail">
+		                    	<div class="detialText">
+		                            ${article.content}
+		                        </div>
+		                        <dl class="articleDate">
+		                            <dt>04/02</dt>
+		                            <dd>2011</dd>
+		                        </dl>
+		                    </div>   
+		                </div>
+		            </div>
+		        </div>
+		        <div id="sidebar">
+		        	<div id="search">
+		            	<div class="search-input">
+		                	<input type="text" class="searchInput" />
+		                </div>
+		                <div class="search-button">
+		                	<input type="image" src="http://s.jesscool.com/imgpro/searchBtm.gif" class="searchBtm" />
+		                </div>
+		            </div>
+		            <!-- <ul id="articleType"> 
+		            	<li class="selected"><a href="#">阳光运动</a></li>
+		                <li><a href="#">配饰精彩</a></li>
+		                <li><a href="#">约会聚会</a></li>
+		                <li><a href="#">商务职场</a></li>
+		                <li><a href="#">形象学院</a></li>
+		                <li><a href="#">本周专题</a></li>
+		            </ul> -->
+		            <div class="hotCase">
+		            	<h2 class="hotCase-title">本周专题</h2>
+		                <ul class="hotCase-lists clearFloat">
+		                	<c:forEach var="kind" items="${weekTopics}">
+								<c:forEach var="article" items="${kind.value}">
+									<li class="hotCase-lists-li">
+				                    	<a href="viewLook.do?lookId=${article.id}&tagId=${kind.key.id}"><img class="hotCase-img" src="${article.cover}" /></a>
+				                        <div class="hotCase-div">
+				                        	<p class="title"><a href="viewLook.do?lookId=${article.id}&tagId=${kind.key.id}">${article.title}</a></p>
+				                            <p class="date">2011-04-02</p>
+				                        </div>
+				                    </li>
+								</c:forEach>
+							</c:forEach>
+		                </ul>
+		            </div>
+		        </div>
+		    </div>
+		    
+		    <div id="footer">
+		    	&copy; Copyright 2008 - 2010 Jesscool
+		    </div>
+		<script src="http://s.jesscool.com/jspro/jquery-1.4.2.min.js"></script>
+		<script src="http://s.jesscool.com/jspro/common.js"></script>
+		<script src="http://s.jesscool.com/jspro/jquery.boxy.js" type="text/javascript"></script>
+		<script src="http://s.jesscool.com/jspro/imgCollect.js"></script>
+		<script> $(function(){ imgCollect(); }); </script>
 		</div>
 	</body>
 </html>

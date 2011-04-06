@@ -175,6 +175,10 @@
 		<servlet-name>DeleteImgServlet</servlet-name>
 		<servlet-class>com.riseful.ajax.DeleteImgServlet</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>UserInfoServlet</servlet-name>
+		<servlet-class>com.riseful.jesscool.UserInfoServlet</servlet-class>
+	</servlet>
 	
 	
 	<!-- url pattern -->
@@ -291,6 +295,10 @@
     <servlet-mapping>
 		<servlet-name>DeleteImgServlet</servlet-name>
 		<url-pattern>/deleteImg.do</url-pattern>    
+    </servlet-mapping>
+    <servlet-mapping>
+		<servlet-name>UserInfoServlet</servlet-name>
+		<url-pattern>/userInfo.do</url-pattern>    
     </servlet-mapping>
     
     

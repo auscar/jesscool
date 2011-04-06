@@ -27,6 +27,7 @@
 			</div>
 		    
 		    <div id="wrapper">
+		    	${ loginMsg }
 		    	<div id="main" class="clearFloat">
 		    	
 		    		<form method="post" action="<%=Env.webRoot%>/userLogin.do" class="userLoginForm" id="userLoginForm">
@@ -66,7 +67,7 @@
 		<script src="http://s.jesscool.com/jspro/common.js"></script>
 		<script src="http://s.jesscool.com/jspro/form.js"></script>
 		<script src="http://s.jesscool.com/jspro/login.js"></script>	
-		<div class="count"><%@ include file="include/footer.inc" %></div>
+		
 	</body>
 	
 </html>

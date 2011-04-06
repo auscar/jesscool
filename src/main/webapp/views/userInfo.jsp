@@ -27,19 +27,20 @@
 		    
 		    <div id="wrapper">
 		    	<div id="main" class="clearFloat">
-		        	<form name="register">
+		        	<form name="register" method="post" action="<%=Env.webRoot%>/userInfo.do">
 		                <div class="userLogin userInfo">
 		                    <h2 class="loginTitle">信息管理</h2>
 		                    <p class="loginDec">您可以修改以下信息，</p>
 		                    <ul class="userInfo-form loginForm">
-		                        <li><label>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</label><input class="text-input loginPwd loginInput" type="password" /></li>
-		                        <li><label>密码确认：</label><input class="text-input loginPwd loginInput" type="text" /></li>
-		                        <li><label>身&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;高：</label><input class="text-input loginPwd loginInput" type="text" /></li>
-		                        <li><label>体&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;重：</label><input class="text-input loginPwd loginInput" type="text" /></li>
+		                        <li><label>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</label><input name="userPwd" class="text-input loginPwd loginInput" type="password" /></li>
+		                        <li><label>密码确认：</label><input class="text-input loginPwd loginInput" type="password" /></li>
+		                        <li><label>身&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;高：</label><input name="userHeight" class="text-input loginPwd loginInput" type="text" /></li>
+		                        <li><label>体&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;重：</label><input name="userWeight" class="text-input loginPwd loginInput" type="text" /></li>
 		                        <li>
 		                            <input class="userInfoSubmit" type="image" src="http://s.jesscool.com/imgpro/submit.gif" />
 		                            <input type="reset" class="registerReset" value="重置" />
 		                        </li>
+		                        <li><c:out value="${ modifyStatus }"></c:out></li>
 		                    </ul>
 		                </div>
 		            </form>

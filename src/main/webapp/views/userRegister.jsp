@@ -6,6 +6,8 @@
 	<head>
 		<%@ include file="include/head.inc" %>
 		<link href="http://s.jesscool.com/csspro/login.css" type="text/css" rel="stylesheet" />
+		<link rel="stylesheet" href="http://s.jesscool.com/jspro/formValidator/css/validationEngine.jquery.css" type="text/css" media="screen" charset="utf-8" />
+		
 		<title>Jesscool!</title>
 	</head>
 	<body>
@@ -54,7 +56,10 @@
 		    </div>
 		    
 		<script src="http://s.jesscool.com/jspro/jquery-1.4.2.min.js"></script>
+		<script src="http://s.jesscool.com/jspro/formValidator/js/jquery.validationEngine-cn.js" type="text/javascript"></script> 
+		<script src="http://s.jesscool.com/jspro/formValidator/js/jquery.validationEngine.js" type="text/javascript"></script>
 		<script src="http://s.jesscool.com/jspro/form.js"></script>
+		<script src="http://s.jesscool.com/jspro/login.js"></script>
 		<div class="count"><%@ include file="include/footer.inc" %></div>
 		</div>	
 		
