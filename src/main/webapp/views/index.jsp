@@ -33,7 +33,10 @@
 		        <div id="sidebar">
 		        	<div id="search">
 		            	<div class="search-input">
-		                	<input type="text" class="searchInput" />
+		            		<form target="_blank" id="searchForm" action="/views/quickSearch.jsp" method="get">
+		            			<input name="words" type="text" class="searchInput" />
+		            		</form>
+		                	
 		                </div>
 		                <div class="search-button">
 		                	<input type="image" src="http://s.jesscool.com/imgpro/searchBtm.gif" class="searchBtm" />
