@@ -67,9 +67,9 @@
 		                	<c:forEach var="kind" items="${weekTopics}">
 								<c:forEach var="article" items="${kind.value}">
 									<li class="hotCase-lists-li">
-				                    	<a href="viewLook.do?lookId=${article.id}&tagId=${kind.key.id}"><img class="hotCase-img" src="${article.cover}" /></a>
+				                    	<a target="_blank" href="viewLook.do?lookId=${article.id}&tagId=${kind.key.id}"><img class="hotCase-img" src="${article.cover}" /></a>
 				                        <div class="hotCase-div">
-				                        	<p class="title"><a href="viewLook.do?lookId=${article.id}&tagId=${kind.key.id}">${article.title}</a></p>
+				                        	<p class="title"><a target="_blank" href="viewLook.do?lookId=${article.id}&tagId=${kind.key.id}">${article.title}</a></p>
 				                            <p class="date">2011-04-02</p>
 				                        </div>
 				                    </li>

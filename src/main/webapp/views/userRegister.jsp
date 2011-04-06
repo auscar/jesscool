@@ -40,8 +40,8 @@
 		                    </ul>
 		                    <p class="loginDec">我们将根据您的体型，为你送上适合您的服饰搭配 </p>
 		                    <ul class="loginForm">
-		                        <li><label>身高：</label><input id="regHeight" name="height" class="validate[required,custom[integer]] text-input loginInput" type="text" /></li>
-		                        <li><label>体重：</label><input id="regWeight" name="weight" class="validate[required,custom[integer]] text-input loginInput" type="text" /></li>
+		                        <li><label>身高：</label><input id="regHeight" name="height" class="validate[required,custom[integer]] text-input loginInput" type="text" /> cm</li>
+		                        <li><label>体重：</label><input id="regWeight" name="weight" class="validate[required,custom[integer]] text-input loginInput" type="text" /> kg</li>
 		                        <li>
 		                            <input class="loginSubmit" type="image" src="http://s.jesscool.com/imgpro/loginSubmit.gif" />
 		                            <input type="reset" class="registerReset" value="重置" />
