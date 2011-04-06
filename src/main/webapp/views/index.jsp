@@ -5,7 +5,7 @@
 	<head>
 		<%@ include file="include/head.inc" %>
 		<link href="http://s.jesscool.com/csspro/layout.css" type="text/css" rel="stylesheet" />
-		<title>Jesscool-男士形象顾问</title>
+		<title>Jesscool-男士形象专家</title>
 	</head>
 	<body>
 		<div id="box">
