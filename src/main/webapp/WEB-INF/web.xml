@@ -179,6 +179,10 @@
 		<servlet-name>UserInfoServlet</servlet-name>
 		<servlet-class>com.riseful.jesscool.UserInfoServlet</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>LatestArticleServlet</servlet-name>
+		<servlet-class>com.riseful.jesscool.LatestArticleServlet</servlet-class>
+	</servlet>
 	
 	
 	<!-- url pattern -->
@@ -299,6 +303,10 @@
     <servlet-mapping>
 		<servlet-name>UserInfoServlet</servlet-name>
 		<url-pattern>/userInfo.do</url-pattern>    
+    </servlet-mapping>
+    <servlet-mapping>
+		<servlet-name>LatestArticleServlet</servlet-name>
+		<url-pattern>/latestArticle.do</url-pattern>    
     </servlet-mapping>
     
     

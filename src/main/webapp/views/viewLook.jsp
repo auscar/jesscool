@@ -18,7 +18,7 @@
 		    	<ul id="quickLink">
 		        	<li><a href="/home.do">首页</a></li>
 		            <li><a href="/profile.do">我的衣酷</a></li>
-		            <li><a href="#">我们的微薄</a></li>
+		            <li><a target="_blank" href="http://t.sina.com.cn/1879936431">我们的微博</a></li>
 		        </ul>
 		        <ul id="login">
 		        	<li><a href="/views/userRegister.jsp">注册</a></li>
@@ -37,8 +37,8 @@
 		                            ${article.content}
 		                        </div>
 		                        <dl class="articleDate">
-		                            <dt>04/02</dt>
-		                            <dd>2011</dd>
+		                            <dt>${article.areMonth}</dt>
+		                            <dd>${article.areYear}</dd>
 		                        </dl>
 		                    </div>   
 		                </div>
@@ -47,7 +47,10 @@
 		        <div id="sidebar">
 		        	<div id="search">
 		            	<div class="search-input">
-		                	<input type="text" class="searchInput" />
+		            		<form target="_blank" id="searchForm" action="/views/quickSearch.jsp" method="get">
+		            			<input name="words" id="regEmail" type="text" class="searchInput text-input" value="搜索服饰搭配，如：约会" />
+		            		</form>
+		                	
 		                </div>
 		                <div class="search-button">
 		                	<input type="image" src="http://s.jesscool.com/imgpro/searchBtm.gif" class="searchBtm" />
@@ -87,7 +90,10 @@
 		<script src="http://s.jesscool.com/jspro/common.js"></script>
 		<script src="http://s.jesscool.com/jspro/jquery.boxy.js" type="text/javascript"></script>
 		<script src="http://s.jesscool.com/jspro/imgCollect.js"></script>
+		<script src="http://s.jesscool.com/jspro/form.js"></script>
+		 <script src="http://s.jesscool.com/jspro/login.js"></script>
 		<script> $(function(){ imgCollect(); }); </script>
+		<div class="count"><%@ include file="include/footer.inc" %></div>
 		</div>
 	</body>
 </html>

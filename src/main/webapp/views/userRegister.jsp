@@ -18,7 +18,7 @@
 		    	<ul id="quickLink">
 		        	<li><a href="/home.do">首页</a></li>
 		            <li><a href="/profile.do">衣酷管理</a></li>
-		            <li><a href="#">我们的微薄</a></li>
+		            <li><a target="_blank" href="http://t.sina.com.cn/1879936431">我们的微博</a></li>
 		        </ul>
 		        <ul id="login">
 		        	<li><a href="/views/userRegister.jsp">注册</a></li>
@@ -34,7 +34,7 @@
 		                    <h2 class="loginTitle">用户注册</h2>
 		                    <p class="loginDec">请填写您的相关信息，</p>
 		                    <ul class="loginForm">
-		                        <li><label>账号：</label><input name="email" id="regEmail" value="请输入邮箱" class="validate[required,custom[email]] text-input loginEmail loginInput" type="text" /></li>
+		                        <li><label>账号：</label><input name="email" id="regEmail" value="请输入邮箱" class="validate[required,custom[email]] text-input loginEmail loginInput" type="text" /> ${ resTips }</li>
 		                        <li><label>密码：</label><input id="regPassword" name="password" class="validate[required] text-input loginPwd loginInput" type="password" /></li>
 		                        <li><label>确认密码：</label><input id="regPassword2" name="passwordCon" class="validate[required,equals[regPassword]] text-input loginPwd loginInput" type="password" /></li>
 		                    </ul>
@@ -43,7 +43,7 @@
 		                        <li><label>身高：</label><input id="regHeight" name="height" class="validate[required,custom[integer]] text-input loginInput" type="text" /> cm</li>
 		                        <li><label>体重：</label><input id="regWeight" name="weight" class="validate[required,custom[integer]] text-input loginInput" type="text" /> kg</li>
 		                        <li>
-		                            <input class="loginSubmit" type="image" src="http://s.jesscool.com/imgpro/loginSubmit.gif" />
+		                            <input class="loginSubmit" type="image" src="http://s.jesscool.com/imgpro/register.gif" />
 		                            <input type="reset" class="registerReset" value="重置" />
 		                        </li>
 		                    </ul>

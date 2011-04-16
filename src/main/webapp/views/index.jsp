@@ -16,7 +16,7 @@
 		    	<ul id="quickLink">
 		        	<li><a href="/home.do">首页</a></li>
 		            <li><a href="/profile.do">我的衣酷</a></li>
-		            <li><a href="#">我们的微薄</a></li>
+		            <li><a target="_blank" href="http://t.sina.com.cn/1879936431">我们的微博</a></li>
 		        </ul>
 		        <ul id="login">
 		        	${ loginStatus }
@@ -34,7 +34,7 @@
 		        	<div id="search">
 		            	<div class="search-input">
 		            		<form target="_blank" id="searchForm" action="/views/quickSearch.jsp" method="get">
-		            			<input name="words" type="text" class="searchInput" />
+		            			<input name="words" id="regEmail" type="text" class="searchInput text-input" value="搜索服饰搭配，如：约会" />
 		            		</form>
 		                	
 		                </div>
@@ -74,9 +74,13 @@
 		    	&copy; Copyright 2008 - 2010 Jesscool
 		    </div>
 		 <script src="http://s.jesscool.com/jspro/jquery-1.4.2.min.js"></script>
+		 <script src="http://s.jesscool.com/jspro/lazyload.js"></script>
 		 <script src="http://s.jesscool.com/jspro/common.js"></script>
 		 <script src="http://s.jesscool.com/jspro/jquery.boxy.js" type="text/javascript"></script>
 		 <script src="http://s.jesscool.com/jspro/imgCollect.js"></script>
+		 <script src="http://s.jesscool.com/jspro/form.js"></script>
+		 <script src="http://s.jesscool.com/jspro/login.js"></script>
+		 
 		    
 		<div class="count"><%@ include file="include/footer.inc" %></div>
 		</div>

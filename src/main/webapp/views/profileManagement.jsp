@@ -17,7 +17,7 @@
 		    	<ul id="quickLink">
 		        	<li><a href="/home.do">首页</a></li>
 		            <li><a href="/profile.do">衣酷首页</a></li>
-		            <li><a href="#">我们的微薄</a></li>
+		            <li><a target="_blank" href="http://t.sina.com.cn/1879936431">我们的微博</a></li>
 		        </ul>
 		        <ul id="login">
 		        	<li>哟，您来啦，despair2@126.com !</li>
@@ -25,7 +25,7 @@
 		            <li><a href="/views/userInfo.jsp">信息管理</a></li>
 		        </ul>
 		        <div id="logo"><a href="/home.do"><img src="http://s.jesscool.com/imgpro/logo.gif" /></a></div>
-		        <div class="recommend"><img src="http://s.jesscool.com/imgpro/recommend.gif" /> <a href="#">最新搭配推荐！</a></div>
+		        <div class="recommend"><img src="http://s.jesscool.com/imgpro/recommend.gif" /> <a href="/latestArticle.do">最新搭配推荐！</a></div>
 		    </div>
 		    
 		    <div id="wrapper">
@@ -68,7 +68,9 @@
 			
 		<script src="http://s.jesscool.com/jspro/jquery-1.4.2.min.js"></script>
 		<script src="http://s.jesscool.com/jspro/jquery-ui.min.js"></script>
+        <!--
 		<script src="http://s.jesscool.com/jspro/common.js"></script>
+        -->
 		<script src="http://s.jesscool.com/jspro/profileManage.js"></script>
 		    
 		</div>

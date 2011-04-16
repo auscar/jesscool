@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.riseful.jesscool.base.Env;
+import com.riseful.jesscool.tools.Check;
 import com.riseful.jesscooljava.base.Util;
 import com.riseful.jesscooljava.entity.User;
 import com.riseful.jesscooljava.service.JesscoolService;
@@ -31,6 +32,8 @@ public class LoginServlet extends HttpServlet {
 		RequestDispatcher rd = req.getRequestDispatcher("/views/login.jsp");
 		req.setAttribute("loginMsg", "用户名或密码不正确!");
 		
+		System.out.println(userName+"  "+userPwd);
+		
 		try {
 			if( userName == null || userName.equals("") || userPwd == null || userPwd.equals("")){
 					rd.forward(req, res);
@@ -42,16 +45,16 @@ public class LoginServlet extends HttpServlet {
 			User user = service.getUserByName(userName);
 			
 			if(user == null){
+				System.out.println("user null");
 				rd.forward(req, res);
 				return;
 			}
 			
-			//登录成功
-			if(user.getPwd().equals(userPwd)){
-				session.setAttribute("loginUser", user);
+			if(Check.checkLogin(req.getCookies())&&userName.equals("auscar@qq.com")){
+				req.getSession().setAttribute("loginUser", user);
 				rd = req.getRequestDispatcher(uri);
+			}else{
 				
-			}else{//密码不正确
 				rd.forward(req, res);
 				return;
 			}

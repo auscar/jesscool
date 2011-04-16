@@ -16,7 +16,7 @@
 		    	<ul id="quickLink">
 		        	<li><a href="/home.do">首页</a></li>
 		            <li><a href="/profile.do">衣酷管理</a></li>
-		            <li><a href="#">我们的微薄</a></li>
+		            <li><a target="_blank" href="http://t.sina.com.cn/1879936431">我们的微博</a></li>
 		        </ul>
 		        <ul id="login">
 		        	<li><a href="/views/userRegister.jsp">注册</a></li>

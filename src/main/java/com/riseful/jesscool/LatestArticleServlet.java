@@ -1,9 +1,6 @@
 package com.riseful.jesscool;
 
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -20,23 +17,26 @@ import com.riseful.jesscooljava.entity.Article;
 import com.riseful.jesscooljava.entity.Tag;
 import com.riseful.jesscooljava.service.JesscoolService;
 
-public class ViewArticleServlet extends HttpServlet {
+public class LatestArticleServlet extends HttpServlet {
 	private static final long serialVersionUID = -5446739804269648500L;
 	public void doGet(HttpServletRequest req, HttpServletResponse res){
-		String articleId = req.getParameter("lookId");
-		String tagId = req.getParameter("tagId");
-		
-		if( articleId == null || articleId.equals("") || tagId == null ||  tagId.equals("") )return;
 		
 		JesscoolService service = (JesscoolService)Util.getCtx().getBean("JesscoolService");
-
-		Article article = service.getSimpleArticleByIdAndTagId(Integer.parseInt(articleId), Integer.parseInt(tagId));
-		article.setAreMonth(article.getIntime().substring(5));
-		article.setAreYear( article.getIntime().substring(0, 4) );
+		int articleId = service.getMaxArticleId();
+		//int articleId = 467;
+		int tagId = 7;
+		Article article = null;
+		Map<Tag,List<Article>> weekTopics = null;
 		
-		//获取本周专题的文章
-		Map<Tag,List<Article>> weekTopics = service.getSimpleArticlesWithTagByTagIds(new int[]{1},30);
-		
+		try{
+			article = service.getSimpleArticleByIdAndTagId( articleId, tagId );
+			
+			//获取本周专题的文章
+			weekTopics = service.getSimpleArticlesWithTagByTagIds(new int[]{1},30);
+		}catch( Exception e){
+			e.printStackTrace();
+			return;
+		}
 		//Map<Tag,List<Article>> sideBarMap = service.getSimpleArticlesWithTagByTagIds(new int[]{1,2,3,4,5,12},8);
 		
 		//将从后台服务获取的数据放到request当中, 以便JSP使用
